@@ -1,0 +1,317 @@
+/* YogaLife styles */
+:root {
+    font-family: 'Poppins', sans-serif;
+    color: #1f2833;
+    background: #f4f7fb;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button,
+.btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+}
+
+.btn,
+.primary-btn {
+    background: #2b6cb0;
+    color: #fff;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 2px solid #2b6cb0;
+    color: #2b6cb0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1f2833;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #1f2833;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #2b6cb0;
+}
+
+.hero,
+.benefits,
+.classes,
+.stats,
+.testimonials,
+.cta,
+footer {
+    padding: 4rem 1.5rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 2rem;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    margin: 0 0 1rem;
+    line-height: 1.05;
+}
+
+.hero h1 span {
+    color: #2b6cb0;
+}
+
+.hero p {
+    margin: 0 0 2rem;
+    max-width: 40rem;
+    color: #4f5d75;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.benefits,
+.classes,
+.stats,
+.testimonials,
+.cta {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(11, 22, 61, 0.08);
+}
+
+.benefits h2,
+.classes h2,
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.benefit-container,
+.class-container,
+.testimonial-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.benefit-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card,
+.class-card,
+.testimonial {
+    background: #f8fbff;
+    padding: 2rem;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.card i,
+.stat i {
+    font-size: 2rem;
+    color: #2b6cb0;
+    margin-bottom: 1rem;
+}
+
+.card h3,
+.class-card h3,
+.testimonial h4 {
+    margin: 1rem 0 0.75rem;
+}
+
+.class-card img {
+    border-radius: 24px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.class-card button {
+    margin-top: 1.5rem;
+    width: 100%;
+    background: #2b6cb0;
+    color: #fff;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat {
+    background: #2b6cb0;
+    color: #fff;
+    border-radius: 24px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.stat h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.testimonial-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.testimonial {
+    background: #eff6ff;
+    text-align: left;
+}
+
+.testimonial p {
+    margin: 0 0 1rem;
+    color: #1f2833;
+}
+
+.cta {
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.cta h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.cta p {
+    max-width: 40rem;
+    margin: 0 auto 2rem;
+    color: #4f5d75;
+}
+
+footer {
+    text-align: center;
+    color: #4f5d75;
+}
+
+footer h2 {
+    margin-bottom: 0.5rem;
+}
+
+footer .social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+footer .social i {
+    font-size: 1.5rem;
+    color: #2b6cb0;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbar,
+    .hero,
+    .benefits,
+    .classes,
+    .stats,
+    .testimonials,
+    .cta,
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    .class-card img {
+        height: 180px;
+    }
+}
